@@ -52,11 +52,11 @@ namespace AscNetCore.IocManager.DependencyInjection
             }
             if (type == typeof(ITransientDependency))
             {
-                return ServiceLifetime.Singleton;
+                return ServiceLifetime.Transient;
             }
             if (type == typeof(ILifetimeScopeDependency))
             {
-                return ServiceLifetime.Singleton;
+                return ServiceLifetime.Scoped;
             }
 
             throw new ArgumentOutOfRangeException($"Provided ServiceLifetime type is invalid. Lifetime:{type.Name}");
