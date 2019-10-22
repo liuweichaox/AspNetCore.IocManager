@@ -44,5 +44,9 @@ namespace AscNetCore.IocManager.Controllers
             var userName = _userService.GetUserNameById("1");
             return userName;
         }
+        public string test4()
+        {
+            return "";
+        }
     }
 }
