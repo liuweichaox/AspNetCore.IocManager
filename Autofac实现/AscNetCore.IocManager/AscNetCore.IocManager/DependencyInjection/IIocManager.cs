@@ -1,6 +1,4 @@
-﻿using Autofac;
-
-namespace AscNetCore.IocManager.DependencyInjection
+﻿namespace AscNetCore.IocManager.DependencyInjection
 {
     /// <summary>
     /// 管理器接口

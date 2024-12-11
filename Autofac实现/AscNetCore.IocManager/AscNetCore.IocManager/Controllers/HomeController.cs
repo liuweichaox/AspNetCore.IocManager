@@ -4,18 +4,12 @@ using AscNetCore.IocManager.Services;
 
 namespace AscNetCore.IocManager.Controllers
 {
-    public class HomeController: Controller
-    {   private readonly IIocManager _iocManager;
-
-        public HomeController(IIocManager iocManager)
-        {
-            _iocManager = iocManager;
-        }
-
+    public class HomeController(IIocManager iocManager) : Controller
+    {
         public string Test1()
         {
             //通过注入获取IocManager实例
-            var userService = _iocManager.GetInstance<IUserService>(); 
+            var userService = iocManager.GetInstance<IUserService>(); 
             var userName = userService.GetUserNameById("1");
             return userName;
         }
